@@ -6,452 +6,215 @@
     <title>Suryo Saputro - XI RPL 1</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">   
     <style>
-        html {
+        * {
             font-family: "Inter", sans-serif;
-            scroll-behavior: smooth;
-            overflow-x: hidden;
-        }
-        html::-webkit-scrollbar {
-            display: none;
         }
         .container {
-            width: 1700px;
-            height: 450px;
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+            width: 80%;
+            height: 50%;
             margin-left: auto;
             margin-right: auto;
+            margin-top: 100px;
+        }
+        .gambar img{
+            border-radius: 20px;
+            width: 700px;
+            height: 700px;
+        }
+        .content {
+            width: 100%;
+        }
+        .atas {
+            display: flex;
+            flex-direction: column;
+        }
+        .atas h2 {
+            margin-top: -10px;
+            letter-spacing: 3px;
+        }
+        .proces {
+            font-size: 13px;
+            display: flex;
+            background-color: rgb(237, 246, 255);
+            width: 130px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            color: rgb(81, 168, 255);
+            border-radius: 5px;
+            margin-right: 30px;
+        }
+        .atas h3 {
+            color: rgb(164, 164, 164);
+            font-weight: bold;
+            font-size: 20;
+        }
+        .uper {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .profile img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+        .photoProfile {
+            display: flex;
+            gap: 20px;
+        }
+        .usrnm {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+        }
+        .budget {
+            display: flex;
+            gap: 20px;
         }
         .profile {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 80px;
-            width: 500px;
-            height: 250px;
+            gap: 300px;
+            margin-top: 20px;
         }
-        .pp {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 3px solid rgba(31,178,72,255);
+        .ats {
+            color: grey;
         }
-        .check {
-            width: 50px;
-            height: 50px;
-        }
-        .nickname {
-            display: flex;
-            align-items: center;
-            font-size: 15px;
-        }
-        .inpo {
-            display: flex;
-            align-items: center;
-        }
-        .inpo img {
-            filter: brightness(50%);
-            width: 30px;
-            height: 30px;
-        }
-        .inpo h1 {
-            font-size: 15px;
-            color: rgb(178, 178, 178);
+        .bwh {
+            font-size: 20px;
             font-weight: 500;
+            letter-spacing: 3px;
         }
-        .info {
+        .text {
+            color: rgb(74, 74, 74);
+            margin-top: 50px;
+            margin-bottom: 50px;
+            font-size: 20px;
+            line-height: 50px;
+        }
+        .ktk {
+            width: 25%;
+            height: 20%;
+            border: 2px dotted grey;
+            border-radius: 20px;
             display: flex;
-            gap: 30px;
-            justify-content: center;
-            margin-top: -20px;
+            flex-direction: column;
+            padding-left: 20px;
+            padding-bottom: 10px;
         }
-        .bar {
+        .ktk span {
+            color: grey;
+            font-size: 20px;
+            margin-top: -10px;
+        }
+        .kotak {
+            display: flex;
+            gap: 50px;
+        }
+        .foto {
+            width: 30%;
+        }
+        .foto img {
+            margin-right: -20px;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+        .plngBawah {
+            margin-top: 100px;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
-        .menu {
+        .view a {
+            margin-right: 30px; 
             display: flex;
-            flex-direction: row;
-            gap: 50px;
-            margin-top: 30px;
-        }
-        .menu a {
-            display: flex;
+            justify-content: center;
             align-items: center;
+            font-size: 20px;
+            color: rgb(0, 98, 255);
             text-decoration: none;
-            color: black;
-            font-size: 20px;
-            height: 50px;
         }
-        .menu a:hover {
-            cursor: pointer;
-            color: rgb(0, 115, 255);
-            border-bottom: 1px solid rgb(0, 115, 255);
-        }
-        #profiles, #projects, #more {
-            background: transparent;
-            border: 0px;
-            font-size: 20px;
-            height: 50px;
-        }
-        #profiles:hover, #projects:hover, #more:hover {
-            cursor: pointer;
-            color: rgb(0, 115, 255);
-            border-bottom: 1px solid rgb(0, 115, 255);
-        }
-        .gambar {
-            display: flex;
-            gap: 10px;
-            margin-top: 40px;
-        }
-        .connect img {
-            width: 40px;
-        }
-        .connect button {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            background-color: rgb(0, 102, 255);
-            color: white;
-            border-radius: 10px;
-            padding-left: 20px;
-            padding-right: 20px;
-            border: 0px;
-        }
-        .connect button:hover {
-            background-color: rgb(0, 82, 206);
-            cursor: pointer;
-        }
-        .comment img {
-            width: 30px;
-        }
-        .comment button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: rgb(255, 255, 255);
-            border-radius: 10px;
-            border: 1px solid rgb(186, 186, 186);
-            width: 40px;
-            height: 40px;
-        }
-        .comment button:hover {
-            cursor: pointer;
-        }
-        .kebab img {
-            width: 20px;
-        }
-        .kebab button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: rgb(255, 255, 255);
-            border-radius: 10px;
-            border: 1px solid rgb(186, 186, 186);
-            width: 40px;
-            height: 40px;
-        }
-        .kebab button:hover {
-            cursor: pointer;
-        }
-        hr {
-            margin-top: 20px;
-        }
-        #Works {
-            display: flex;
-            flex-direction: column;
-            width: 1700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        #work {
-            margin-top: -40px;
-            margin-bottom: 40px;
-            font-size: 20px;
-        }
-        .posting {
-            width: 1700px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .konten {
-            border: 1px solid rgb(215, 215, 215);
-            border-radius: 20px;
-            width: 550px;
-            height: 520px;
-            box-shadow: 0px 0px 5px rgb(199, 199, 199);
-        }
-        .konten img {
-            width: 550px;
-            height: 350px;
-            border-radius: 20px 20px 0px 0px;
-        }
-        .konten h1 {
-            font-size: 25px;
-            font-weight: 500;
-            margin-left: 30px;
-        }
-        .porfile img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin-left: 30px;
-        }
-        .porfile {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .porfile h2 {
-            font-size: 20px;
-            font-weight: 500;
-            color: rgb(123, 123, 123);
-        }
-        .love {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .love img {
+        .view img {
             width: 30px;
             height: 30px;
-        }
-        .love p {
-            color: rgb(72, 72, 72);
-        }
-        .komen {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .komen img {
-            width: 30px;
-            height: 30px;
-        }
-        .komen p {
-            color: rgb(72, 72, 72);
-        }
-        .abc {
-            display: flex;
-            margin-left: auto;
-            margin-right: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="infoProfile">
+        <div class="gambar">
+            <img src="gambar.jpg" alt="gambar 1">
+        </div>
+        <div class="content">
+            <div class="uper">
+                <div class="atas">
+                    <h3>Featured</h3>
+                    <h2>9 Degree</h2>
+                </div>
+                <div class="proces">
+                    <h2>In Process</h2>
+                </div>
+            </div>
             <div class="profile">
-                <img src="jenny.jpg" alt="Profile" class="pp">
-                <div class="nickname">
-                    <h1>Jenny Klabber</h1>
-                    <img src="check.png" alt="Verified Check" class="check">
+                <div class="photoProfile">
+                    <img src="opal.png" alt="Profile">
+                    <div class="usrnm">
+                        <div class="ats">
+                            <span>Manager</span>
+                        </div>
+                        <div class="bwh">
+                            <span>Robert Fox</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="budget">
+                    <img src="budget.png" alt="Profile">
+                    <div class="usrnm">
+                        <div class="ats">
+                            <span>Budget</span>
+                        </div>
+                        <div class="bwh">
+                            <span>$64.800</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="info">
-                <div class="inpo">
-                    <img src="keenThemes.png" alt="keenThemes">
-                    <h1>KeenThemes</h1>
+            <div class="text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae illum animi eveniet minus debitis, hic in saepe sequi consectetur repudiandae tempora, totam temporibus explicabo corrupti porro excepturi velit ipsam iusto.</p>
+            </div>
+            <div class="kotak">
+                <div class="ktk">
+                    <h2>Feb 6, 2021</h2>
+                    <span>Due Date</span>
                 </div>
-                <div class="inpo">
-                    <img src="location.png" alt="Location">
-                    <h1>SF, Bay Area</h1>
-                </div>
-                <div class="inpo">
-                    <img src="email.png" alt="Email">
-                    <h1>jenny@kteam.com</h1>
+                <div class="ktk">
+                    <h2>$284,900</h2>
+                    <span>Budget</span>
                 </div>
             </div>
-        </div>
-        <div class="bar">
-            <div class="menu">
-                <select name="Profiles" id="profiles">
-                    <option value="Profiles">Profiles</option>
-                </select>
-                <select name="Projects" id="projects">
-                    <option value="Projects">Projects</option>
-                </select>
-                <a href="#Works">Works</a>
-                <a href="#">Teams</a>
-                <a href="#">Network</a>
-                <a href="#">Activity</a>
-                <select name="More" id="more">
-                    <option value="More">More</option>
-                </select>
-            </div>
-            <div class="gambar">
-                <div class="connect">
-                    <button>
-                        <img src="connect.png" alt="Connect">
-                        Connect
-                    </button>
+            <div class="plngBawah">
+                <div class="foto">
+                    <img src="fakhri.png" alt="foto1">
+                    <img src="alzhar.png" alt="foto2">
+                    <img src="ezhar.png" alt="foto3">
                 </div>
-                <div class="comment">
-                    <button>
-                        <img src="comment.png" alt="Comment">
-                    </button>
-                </div>
-                <div class="kebab">
-                    <button>
-                        <img src="kebab.png" alt="Kebab">
-                    </button>
+                <div class="view">
+                    <a href="#">View Project
+                        <img src="panah.png" alt="panah">
+                    </a>
                 </div>
             </div>
         </div>
-        <hr>
+        
     </div>
-    <section id="Works">
-        <h1 id="work">8 Works</h1>
-        <div class="posting">
-            <div class="konten">
-                <img src="image1.jpg" alt="Image">
-                <h1>Urban Dreams</h1>
-                <div class="porfile">
-                    <img src="cody.jpg" alt="porfile">
-                    <h2>Cody Fisher</h2>
-                    <div class="abc">
-                        <div class="love">
-                            <img src="love.png" alt="Love">
-                            <p>24</p>
-                        </div>
-                        <div class="komen">
-                            <img src="komen.png" alt="Komen">
-                            <p>5</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="konten">
-                <img src="image2.jpg" alt="Image">
-                <h1>Black Keyboard</h1>
-                <div class="porfile">
-                    <img src="alzhar.png" alt="porfile">
-                    <h2>Mas Alzhar</h2>
-                    <div class="abc">
-                        <div class="love">
-                            <img src="love.png" alt="Love">
-                            <p>56</p>
-                        </div>
-                        <div class="komen">
-                            <img src="komen.png" alt="Komen">
-                            <p>40</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="konten">
-                <img src="image3.jpg" alt="Image">
-                <h1>Basketball</h1>
-                <div class="porfile">
-                    <img src="ezhar.png" alt="porfile">
-                    <h2>Ezhar Telur</h2>
-                    <div class="abc">
-                        <div class="love">
-                            <img src="love.png" alt="Love">
-                            <p>235</p>
-                        </div>
-                        <div class="komen">
-                            <img src="komen.png" alt="Komen">
-                            <p>245</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="konten">
-                <img src="image5.png" alt="Image">
-                <h1>Fire Gun</h1>
-                <div class="porfile">
-                    <img src="opal.png" alt="porfile">
-                    <h2>Opal</h2>
-                    <div class="abc">
-                        <div class="love">
-                            <img src="love.png" alt="Love">
-                            <p>2</p>
-                        </div>
-                        <div class="komen">
-                            <img src="komen.png" alt="Komen">
-                            <p>0</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="konten">
-                <img src="image4.jpg" alt="Image">
-                <h1>Jogging</h1>
-                <div class="porfile">
-                    <img src="fakhri.png" alt="porfile">
-                    <h2>Mas Fakhri</h2>
-                    <div class="abc">
-                        <div class="love">
-                            <img src="love.png" alt="Love">
-                            <p>224</p>
-                        </div>
-                        <div class="komen">
-                            <img src="komen.png" alt="Komen">
-                            <p>59</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="konten">
-                <img src="image1.jpg" alt="Image">
-                <h1>Urban Dreams</h1>
-                <div class="porfile">
-                    <img src="fakhri.png" alt="porfile">
-                    <h2>Mas Fakhri</h2>
-                    <div class="abc">
-                        <div class="love">
-                            <img src="love.png" alt="Love">
-                            <p>24</p>
-                        </div>
-                        <div class="komen">
-                            <img src="komen.png" alt="Komen">
-                            <p>5</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="konten">
-                <img src="image1.jpg" alt="Image">
-                <h1>Urban Dreams</h1>
-                <div class="porfile">
-                    <img src="fakhri.png" alt="porfile">
-                    <h2>Mas Fakhri</h2>
-                    <div class="abc">
-                        <div class="love">
-                            <img src="love.png" alt="Love">
-                            <p>24</p>
-                        </div>
-                        <div class="komen">
-                            <img src="komen.png" alt="Komen">
-                            <p>5</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="konten">
-                <img src="image1.jpg" alt="Image">
-                <h1>Urban Dreams</h1>
-                <div class="porfile">
-                    <img src="fakhri.png" alt="porfile">
-                    <h2>Mas Fakhri</h2>
-                    <div class="abc">
-                        <div class="love">
-                            <img src="love.png" alt="Love">
-                            <p>24</p>
-                        </div>
-                        <div class="komen">
-                            <img src="komen.png" alt="Komen">
-                            <p>5</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 </body>
 </html>
