@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suryo Saputro - XI RPL 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <style>
+        html {
+            font-family: "Inter", sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        html::-webkit-scrollbar {
+            display: none;
+        }
+        .container {
+            width: 1700px;
+            height: 450px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 80px;
+            width: 500px;
+            height: 250px;
+        }
+        .pp {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid rgba(31,178,72,255);
+        }
+        .check {
+            width: 50px;
+            height: 50px;
+        }
+        .nickname {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+        }
+        .inpo {
+            display: flex;
+            align-items: center;
+        }
+        .inpo img {
+            filter: brightness(50%);
+            width: 30px;
+            height: 30px;
+        }
+        .inpo h1 {
+            font-size: 15px;
+            color: rgb(178, 178, 178);
+            font-weight: 500;
+        }
+        .info {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin-top: -20px;
+        }
+        .bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .menu {
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+            margin-top: 30px;
+        }
+        .menu a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            height: 50px;
+        }
+        .menu a:hover {
+            cursor: pointer;
+            color: rgb(0, 115, 255);
+            border-bottom: 1px solid rgb(0, 115, 255);
+        }
+        #profiles, #projects, #more {
+            background: transparent;
+            border: 0px;
+            font-size: 20px;
+            height: 50px;
+        }
+        #profiles:hover, #projects:hover, #more:hover {
+            cursor: pointer;
+            color: rgb(0, 115, 255);
+            border-bottom: 1px solid rgb(0, 115, 255);
+        }
+        .gambar {
+            display: flex;
+            gap: 10px;
+            margin-top: 40px;
+        }
+        .connect img {
+            width: 40px;
+        }
+        .connect button {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: rgb(0, 102, 255);
+            color: white;
+            border-radius: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border: 0px;
+        }
+        .connect button:hover {
+            background-color: rgb(0, 82, 206);
+            cursor: pointer;
+        }
+        .comment img {
+            width: 30px;
+        }
+        .comment button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            border: 1px solid rgb(186, 186, 186);
+            width: 40px;
+            height: 40px;
+        }
+        .comment button:hover {
+            cursor: pointer;
+        }
+        .kebab img {
+            width: 20px;
+        }
+        .kebab button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            border: 1px solid rgb(186, 186, 186);
+            width: 40px;
+            height: 40px;
+        }
+        .kebab button:hover {
+            cursor: pointer;
+        }
+        hr {
+            margin-top: 20px;
+        }
+        #Works {
+            display: flex;
+            flex-direction: column;
+            width: 1700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #work {
+            margin-top: -40px;
+            margin-bottom: 40px;
+            font-size: 20px;
+        }
+        .posting {
+            width: 1700px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .konten {
+            border: 1px solid rgb(215, 215, 215);
+            border-radius: 20px;
+            width: 550px;
+            height: 520px;
+            box-shadow: 0px 0px 5px rgb(199, 199, 199);
+        }
+        .konten img {
+            width: 550px;
+            height: 350px;
+            border-radius: 20px 20px 0px 0px;
+        }
+        .konten h1 {
+            font-size: 25px;
+            font-weight: 500;
+            margin-left: 30px;
+        }
+        .porfile img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-left: 30px;
+        }
+        .porfile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .porfile h2 {
+            font-size: 20px;
+            font-weight: 500;
+            color: rgb(123, 123, 123);
+        }
+        .love {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .love img {
+            width: 30px;
+            height: 30px;
+        }
+        .love p {
+            color: rgb(72, 72, 72);
+        }
+        .komen {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .komen img {
+            width: 30px;
+            height: 30px;
+        }
+        .komen p {
+            color: rgb(72, 72, 72);
+        }
+        .abc {
+            display: flex;
+            margin-left: auto;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="infoProfile">
+            <div class="profile">
+                <img src="jenny.jpg" alt="Profile" class="pp">
+                <div class="nickname">
+                    <h1>Jenny Klabber</h1>
+                    <img src="check.png" alt="Verified Check" class="check">
+                </div>
+            </div>
+            <div class="info">
+                <div class="inpo">
+                    <img src="keenThemes.png" alt="keenThemes">
+                    <h1>KeenThemes</h1>
+                </div>
+                <div class="inpo">
+                    <img src="location.png" alt="Location">
+                    <h1>SF, Bay Area</h1>
+                </div>
+                <div class="inpo">
+                    <img src="email.png" alt="Email">
+                    <h1>jenny@kteam.com</h1>
+                </div>
+            </div>
+        </div>
+        <div class="bar">
+            <div class="menu">
+                <select name="Profiles" id="profiles">
+                    <option value="Profiles">Profiles</option>
+                </select>
+                <select name="Projects" id="projects">
+                    <option value="Projects">Projects</option>
+                </select>
+                <a href="#Works">Works</a>
+                <a href="#">Teams</a>
+                <a href="#">Network</a>
+                <a href="#">Activity</a>
+                <select name="More" id="more">
+                    <option value="More">More</option>
+                </select>
+            </div>
+            <div class="gambar">
+                <div class="connect">
+                    <button>
+                        <img src="connect.png" alt="Connect">
+                        Connect
+                    </button>
+                </div>
+                <div class="comment">
+                    <button>
+                        <img src="comment.png" alt="Comment">
+                    </button>
+                </div>
+                <div class="kebab">
+                    <button>
+                        <img src="kebab.png" alt="Kebab">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <section id="Works">
+        <h1 id="work">8 Works</h1>
+        <div class="posting">
+            <div class="konten">
+                <img src="image1.jpg" alt="Image">
+                <h1>Urban Dreams</h1>
+                <div class="porfile">
+                    <img src="cody.jpg" alt="porfile">
+                    <h2>Cody Fisher</h2>
+                    <div class="abc">
+                        <div class="love">
+                            <img src="love.png" alt="Love">
+                            <p>24</p>
+                        </div>
+                        <div class="komen">
+                            <img src="komen.png" alt="Komen">
+                            <p>5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="konten">
+                <img src="image2.jpg" alt="Image">
+                <h1>Black Keyboard</h1>
+                <div class="porfile">
+                    <img src="alzhar.png" alt="porfile">
+                    <h2>Mas Alzhar</h2>
+                    <div class="abc">
+                        <div class="love">
+                            <img src="love.png" alt="Love">
+                            <p>56</p>
+                        </div>
+                        <div class="komen">
+                            <img src="komen.png" alt="Komen">
+                            <p>40</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="konten">
+                <img src="image3.jpg" alt="Image">
+                <h1>Basketball</h1>
+                <div class="porfile">
+                    <img src="ezhar.png" alt="porfile">
+                    <h2>Ezhar Telur</h2>
+                    <div class="abc">
+                        <div class="love">
+                            <img src="love.png" alt="Love">
+                            <p>235</p>
+                        </div>
+                        <div class="komen">
+                            <img src="komen.png" alt="Komen">
+                            <p>245</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="konten">
+                <img src="image5.png" alt="Image">
+                <h1>Fire Gun</h1>
+                <div class="porfile">
+                    <img src="opal.png" alt="porfile">
+                    <h2>Opal</h2>
+                    <div class="abc">
+                        <div class="love">
+                            <img src="love.png" alt="Love">
+                            <p>2</p>
+                        </div>
+                        <div class="komen">
+                            <img src="komen.png" alt="Komen">
+                            <p>0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="konten">
+                <img src="image4.jpg" alt="Image">
+                <h1>Jogging</h1>
+                <div class="porfile">
+                    <img src="fakhri.png" alt="porfile">
+                    <h2>Mas Fakhri</h2>
+                    <div class="abc">
+                        <div class="love">
+                            <img src="love.png" alt="Love">
+                            <p>224</p>
+                        </div>
+                        <div class="komen">
+                            <img src="komen.png" alt="Komen">
+                            <p>59</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="konten">
+                <img src="image1.jpg" alt="Image">
+                <h1>Urban Dreams</h1>
+                <div class="porfile">
+                    <img src="fakhri.png" alt="porfile">
+                    <h2>Mas Fakhri</h2>
+                    <div class="abc">
+                        <div class="love">
+                            <img src="love.png" alt="Love">
+                            <p>24</p>
+                        </div>
+                        <div class="komen">
+                            <img src="komen.png" alt="Komen">
+                            <p>5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="konten">
+                <img src="image1.jpg" alt="Image">
+                <h1>Urban Dreams</h1>
+                <div class="porfile">
+                    <img src="fakhri.png" alt="porfile">
+                    <h2>Mas Fakhri</h2>
+                    <div class="abc">
+                        <div class="love">
+                            <img src="love.png" alt="Love">
+                            <p>24</p>
+                        </div>
+                        <div class="komen">
+                            <img src="komen.png" alt="Komen">
+                            <p>5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="konten">
+                <img src="image1.jpg" alt="Image">
+                <h1>Urban Dreams</h1>
+                <div class="porfile">
+                    <img src="fakhri.png" alt="porfile">
+                    <h2>Mas Fakhri</h2>
+                    <div class="abc">
+                        <div class="love">
+                            <img src="love.png" alt="Love">
+                            <p>24</p>
+                        </div>
+                        <div class="komen">
+                            <img src="komen.png" alt="Komen">
+                            <p>5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
