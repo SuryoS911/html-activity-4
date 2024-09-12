@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suryo Saputro - XI RPL 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">   
+    <style>
+        * {
+            font-family: "Inter", sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+            width: 80%;
+            height: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+        }
+        .gambar img{
+            border-radius: 20px;
+            width: 700px;
+            height: 700px;
+        }
+        .content {
+            width: 100%;
+        }
+        .atas {
+            display: flex;
+            flex-direction: column;
+        }
+        .atas h2 {
+            margin-top: -10px;
+            letter-spacing: 3px;
+        }
+        .proces {
+            font-size: 13px;
+            display: flex;
+            background-color: rgb(237, 246, 255);
+            width: 130px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            color: rgb(81, 168, 255);
+            border-radius: 5px;
+            margin-right: 30px;
+        }
+        .atas h3 {
+            color: rgb(164, 164, 164);
+            font-weight: bold;
+            font-size: 20;
+        }
+        .uper {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .profile img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+        .photoProfile {
+            display: flex;
+            gap: 20px;
+        }
+        .usrnm {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+        }
+        .budget {
+            display: flex;
+            gap: 20px;
+        }
+        .profile {
+            display: flex;
+            gap: 300px;
+            margin-top: 20px;
+        }
+        .ats {
+            color: grey;
+        }
+        .bwh {
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 3px;
+        }
+        .text {
+            color: rgb(74, 74, 74);
+            margin-top: 50px;
+            margin-bottom: 50px;
+            font-size: 20px;
+            line-height: 50px;
+        }
+        .ktk {
+            width: 25%;
+            height: 20%;
+            border: 2px dotted grey;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            padding-left: 20px;
+            padding-bottom: 10px;
+        }
+        .ktk span {
+            color: grey;
+            font-size: 20px;
+            margin-top: -10px;
+        }
+        .kotak {
+            display: flex;
+            gap: 50px;
+        }
+        .foto {
+            width: 30%;
+        }
+        .foto img {
+            margin-right: -20px;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+        .plngBawah {
+            margin-top: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .view a {
+            margin-right: 30px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            color: rgb(0, 98, 255);
+            text-decoration: none;
+        }
+        .view img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="gambar">
+            <img src="gambar.jpg" alt="gambar 1">
+        </div>
+        <div class="content">
+            <div class="uper">
+                <div class="atas">
+                    <h3>Featured</h3>
+                    <h2>9 Degree</h2>
+                </div>
+                <div class="proces">
+                    <h2>In Process</h2>
+                </div>
+            </div>
+            <div class="profile">
+                <div class="photoProfile">
+                    <img src="opal.png" alt="Profile">
+                    <div class="usrnm">
+                        <div class="ats">
+                            <span>Manager</span>
+                        </div>
+                        <div class="bwh">
+                            <span>Robert Fox</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="budget">
+                    <img src="budget.png" alt="Profile">
+                    <div class="usrnm">
+                        <div class="ats">
+                            <span>Budget</span>
+                        </div>
+                        <div class="bwh">
+                            <span>$64.800</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae illum animi eveniet minus debitis, hic in saepe sequi consectetur repudiandae tempora, totam temporibus explicabo corrupti porro excepturi velit ipsam iusto.</p>
+            </div>
+            <div class="kotak">
+                <div class="ktk">
+                    <h2>Feb 6, 2021</h2>
+                    <span>Due Date</span>
+                </div>
+                <div class="ktk">
+                    <h2>$284,900</h2>
+                    <span>Budget</span>
+                </div>
+            </div>
+            <div class="plngBawah">
+                <div class="foto">
+                    <img src="fakhri.png" alt="foto1">
+                    <img src="alzhar.png" alt="foto2">
+                    <img src="ezhar.png" alt="foto3">
+                </div>
+                <div class="view">
+                    <a href="#">View Project
+                        <img src="panah.png" alt="panah">
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
